@@ -1,0 +1,455 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - ola
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: name
+  examples: |
+    - what is your name 
+    - what's your name
+    - tell me your name
+    - your name
+    - name
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+
+- intent: my_age
+  examples: |
+    - What is your age?
+    - how old are you?
+    - May I know about your age?
+    - Tell me your age
+    - Tell Your age
+    - your age
+    - how many years old are you
+    - may I know what is your age
+
+- intent: my_city
+  examples: |
+    - where do you live?
+    - from which city you belog to?
+    - where do you belong to?
+    - In which city are you living?
+    - what is you home town?
+    - Where is your home town?
+    - what is you native city?
+    - which is your home town?
+    - which is your native city?
+    - your native city
+    - native city
+    - your city
+    - your home town
+    - home town
+    
+- intent: highest_qualification
+  examples: |
+    - what is your highest qualification?
+    - What's your highest qualification
+    - highest qualification
+    - may I know about your highest qualification
+    - may I know what is your highest qualification
+    - please tell me about your highest qualification
+    - what is your highest study?
+    - What's your highest study
+    - highest study
+    - may I know about your highest study
+    - may I know what is your highest study
+    - please tell me about your highest study
+    - what is your recent qualification?
+    - What's your recent qualification
+    - recent qualification
+    - may I know about your recent qualification
+    - may I know what is your recent qualification
+    - please tell me about your recent qualification
+
+- intent: my_college
+  examples: |
+    - From which college you have done your Btech?
+    - From which college you have done your Highest Qualification?
+    - institute name
+    - college name        
+    - From which institute you have done your Btech?
+    - From which institute you have done your Highest Qualification?
+    - May I know about your college name in which you have completed your btech
+    - May I know about your institute name in which you have completed your btech
+
+- intent: my_college_city
+  examples: |
+    - From which city you did your highest education?
+    - from whcih city you have done your highest qualification
+    - city in which you have done your highest qualification.
+    - From which city you did your highest study?
+    - from whcih city you have done your highest study
+    - city in which you have done your highest study.    
+    - college city
+    - From which city you did your College?
+    - from whcih city you have done your college
+    - city in which you have done your college.
+    - institute city
+
+- intent: my_college_year
+  examples: |
+    - when did you completed your college?
+    - which year you are pass out from college
+    - In which year you have completed your college
+    - which year you are pass out from Btech.
+    - In which year you have completed your Btech.
+    - when did you completed your Btech?
+
+- intent: my_school
+  examples: |
+    - what is your [school name]{"entity":"school"}
+    - what was your [school name]{"entity":"school"}
+    - from which school you have done [highschool]{"entity":"school", "value":"high school"}
+    - from which school you have done [high school]{"entity":"school", "value":"high school"}
+    - from which school you have done [10th]{"entity":"school", "value":"high school"}
+    - from which school you have done [intermediate]{"entity":"school", "value":"intermediate"}
+    - from which school you have done [12th]{"entity":"school", "value":"intermediate"}
+    - [highschool]{"entity":"school", "value":"high school"} name
+    - [high school]{"entity":"school", "value":"high school"} name
+    - [Highschool]{"entity":"school", "value":"high school"} name
+    - [High school]{"entity":"school", "value":"high school"} name
+    - [10th]{"entity":"school", "value":"high school"} school name 
+    - [intermediate]{"entity":"school", "value":"intermediate"} school name
+    - [Intermediate]{"entity":"school", "value":"intermediate"} school name
+    - [12th]{"entity":"school", "value":"intermediate"} school name
+    - [12th]{"entity":"school", "value":"intermediate"}
+    - [intermediate]{"entity":"school", "value":"intermediate"}
+    - [high school]{"entity":"school", "value":"high school"}
+    - [highschool]{"entity":"school", "value":"high school"}    
+    - [10th]{"entity":"school", "value":"high school"}
+    - [both]{"entity":"school","value":"both"}
+    - [10th]{"entity":"school", "value":"high school"} and [12th]{"entity":"school", "value":"intermediate"}
+    - [Intermediate]{"entity":"school", "value":"intermediate"}
+    - [High school]{"entity":"school", "value":"high school"}
+    - [Highschool]{"entity":"school", "value":"high school"}
+
+- intent: no_of_family_members
+  examples: |
+    - how many family members do you have
+    - how many family members are there in your family
+    - what is the number of members in your family
+    - tell me the number of members in your family
+    - may I know how many members are there in your family
+    - count of family members
+    - count of members in your family
+
+- intent: family_members_name
+  examples: |
+    - [grandfather]{"entity":"relation","value":"grandfather"} name
+    - [grandfather's]{"entity":"relation","value":"grandfather"} name
+    - [grandmother]{"entity":"relation","value":"grandmother"} name
+    - [grandmother's]{"entity":"relation","value":"grandmother"} name
+    - [father]{"entity":"relation","value":"father"} name
+    - [father's]{"entity":"relation","value":"father"} name
+    - [mother]{"entity":"relation","value":"mother"} name
+    - [mother's]{"entity":"relation","value":"mother"} name
+    - [uncle]{"entity":"relation","value":"uncle"} name
+    - [uncle's]{"entity":"relation","value":"uncle"} name
+    - [aunt]{"entity":"relation","value":"aunt"} name
+    - [aunt's]{"entity":"relation","value":"aunt"} name
+    - what is your [grandfather]{"entity":"relation","value":"grandfather"} name
+    - what's your [grandfather]{"entity":"relation","value":"grandfather"} name
+    - what is your [grandfather's]{"entity":"relation","value":"grandfather"} name
+    - what's your [grandfather's]{"entity":"relation","value":"grandfather"} name
+    - what is your [father]{"entity":"relation","value":"father"} name
+    - what's your [father]{"entity":"relation","value":"father"} name
+    - what is your [father's]{"entity":"relation","value":"father"} name
+    - what's your [father's]{"entity":"relation","value":"father"} name
+    - what is your [grandmother]{"entity":"relation","value":"grandmother"} name
+    - what's your [grandmother]{"entity":"relation","value":"grandmother"} name
+    - what is your [grandmother's]{"entity":"relation","value":"grandmother"} name
+    - what's your [grandmother's]{"entity":"relation","value":"grandmother"} name
+    - what is your [mother]{"entity":"relation","value":"mother"} name
+    - what's your [mother]{"entity":"relation","value":"mother"} name
+    - what is your [mother's]{"entity":"relation","value":"mother"} name
+    - what's your [mother's]{"entity":"relation","value":"mother"} name
+    - what is your [uncle]{"entity":"relation","value":"uncle"} name
+    - what's your [uncle]{"entity":"relation","value":"uncle"} name
+    - what is your [uncle's]{"entity":"relation","value":"uncle"} name
+    - what's your [uncle's]{"entity":"relation","value":"uncle"} name
+    - what is your [aunt]{"entity":"relation","value":"aunt"} name
+    - what's your [aunt]{"entity":"relation","value":"aunt"} name
+    - what is your [aunt's]{"entity":"relation","value":"aunt"} name
+    - what's your [aunt's]{"entity":"relation","value":"aunt"} name
+    - who is [grandfather]{"entity":"relation","value":"grandfather"} 
+    - who is [grandfather's]{"entity":"relation","value":"grandfather"} 
+    - who is [grandmother]{"entity":"relation","value":"grandmother"} 
+    - who is [grandmother's]{"entity":"relation","value":"grandmother"} 
+    - who is [father]{"entity":"relation","value":"father"} 
+    - who is [father's]{"entity":"relation","value":"father"} 
+    - who is [mother]{"entity":"relation","value":"mother"} 
+    - who is [mother's]{"entity":"relation","value":"mother"} 
+    - who is [uncle]{"entity":"relation","value":"uncle"} 
+    - who is [uncle's]{"entity":"relation","value":"uncle"} 
+    - who is [aunt]{"entity":"relation","value":"aunt"} 
+    - who is [aunt's]{"entity":"relation","value":"aunt"} 
+    - [parent's]{"entity":"relation","value":"parent"} name
+    - [grandparent's]{"entity":"relation","value":"grandparent"} name
+    - [parent]{"entity":"relation","value":"parent"} name
+    - [grandparent]{"entity":"relation","value":"grandparent"} name
+    - [uncle]{"entity":"relation","value":"uncle"} and [aunt]{"entity":"relation","value":"aunt"} name
+
+- intent: siblings_count
+  examples: |
+    - how many [siblings]{"entity":"relation","value":"siblings"} you have
+    - [siblings]{"entity":"relation","value":"siblings"} count
+    - how many [sibling]{"entity":"relation","value":"siblings"} you have
+    - [sibling]{"entity":"relation","value":"siblings"} count
+    - how many [siblings]{"entity":"relation","value":"siblings"} are their in your family
+    - what are the number of [siblings]{"entity":"relation","value":"siblings"} you have 
+    - how many [brothers]{"entity":"relation","value":"brothers"} you have
+    - how many [sisters]{"entity":"relation","value":"sister"} you have
+    - how many [brother]{"entity":"relation","value":"brothers"} you have
+    - how many [sister]{"entity":"relation","value":"sister"} you have
+    - how many [sister]{"entity":"relation","value":"sister"} and [brother]{"entity":"relation","value":"brothers"} you have
+    - how many [sister]{"entity":"relation","value":"sister"} and [brothers]{"entity":"relation","value":"brothers"} you have
+
+- intent: siblings_name
+  examples: |
+    - what is your [first number brother]{"entity":"brother_name", "value":"first"} name
+    - what is your [second number brother]{"entity":"brother_name","value":"second"} name
+    - what is your [third number brother]{"entity":"brother_name","value":"third"} name
+    - [first]{"entity":"brother_name", "value":"first"}  number brother name
+    - [second]{"entity":"brother_name","value":"second"} number brother name
+    - [third]{"entity":"brother_name","value":"third"} number brother name
+    - who is [Kuldeepak]{"entity":"brother_name","value":"Kuldeepak"}
+    - who is [Kuldeepak Gupta]{"entity":"brother_name","value":"Kuldeepak"}
+    - who is [Aishwarya]{"entity":"brother_name","value":"Aishwarya"}
+    - who is [Aishwarya Gupta]{"entity":"brother_name","value":"Aishwarya"}
+    - who is [Atulya]{"entity":"brother_name","value":"Atulya"}
+    - who is [Atulya Gupta]{"entity":"brother_name","value":"Atulya"}
+    - [all]{"entity":"brother_name","value":"all"}
+    - what is your [sister]{"entity":"sister_name","value":"sister's name"} name
+    - your [sister]{"entity":"sister_name","value":"sister's name"} name
+    - [sister]{"entity":"sister_name","value":"sister's name"} name
+    - who is [Ishika]{"entity":"sister_name","value":"Ishika"}
+    - who is [Ishika Gupta]{"entity":"sister_name","value":"Ishika"}    
+    - name your [sibling's]{"entity":"sibling_name"}
+    - your [sibling's]{"entity":"sibling_name"} name
+    - [sibling's]{"entity":"sibling_name"} name
+
+- intent: brother_name
+  examples: |
+    - what is your brother name
+    - your brother name
+    - brother name
+
+- intent: siblings_works
+  examples: |
+    - what does your [siblings do]{"entity":"siblings_work","value":"ask"}
+    - what are your [siblings doing]{"entity":"siblings_work","value":"ask"}
+    - what does your [brothers do]{"entity":"siblings_work","value":"brothers work"}
+    - what does your [brother do]{"entity":"siblings_work","value":"brothers work"}
+    - what are your [brothers doing]{"entity":"siblings_work","value":"brothers work"}
+    - what are your [brother doing]{"entity":"siblings_work","value":"brothers work"}
+    - [sibling's works]{"entity":"siblings_work","value":"ask"}
+    - [brother's]{"entity":"siblings_work","value":"brothers work"} work
+    - what does [Kuldeepak]{"entity":"siblings_work","value":"Kuldeepak's work"} do
+    - what is [Kuldeepak's]{"entity":"siblings_work","value":"Kuldeepak's work"} work
+    - what is [Kuldeepak's]{"entity":"siblings_work","value":"Kuldeepak's work"} occupation
+    - what does [Aishwarya]{"entity":"siblings_work","value":"Aishwarya's work"} do
+    - what is [Aishwarya's]{"entity":"siblings_work","value":"Aishwarya's work"} work
+    - what does [Aishwarya's]{"entity":"siblings_work","value":"Aishwarya's work"} occupation
+    - what does [Atulya]{"entity":"siblings_work","value":"Atulya's work"} do
+    - what does [Atulaya's]{"entity":"siblings_work","value":"Atulya's work"} work
+    - what does [Atulya's]{"entity":"siblings_work","value":"Atulya's work"} occupation
+    - what is [Kuldeepak]{"entity":"siblings_work","value":"Kuldeepak's work"} doing
+    - what is [Aishwarya]{"entity":"siblings_work","value":"Aishwarya's work"} doing
+    - what is [Atulya]{"entity":"siblings_work","value":"Atulya's work"} doing
+    - what does your [sister do]{"entity":"siblings_work","value":"sisters work"}
+    - what does your [sisters do]{"entity":"siblings_work","value":"sisters work"}
+    - what is [Ishika]{"entity":"siblings_work","value":"Ishika's work"} doing
+    - what does [Ishika]{"entity":"siblings_work","value":"Ishika's work"} do
+    - what is [Ishika's]{"entity":"siblings_work","value":"Ishika's work"} work
+    - what is [Ishika's]{"entity":"siblings_work","value":"Ishika's work"} occupation
+    - [sister's]{"entity":"siblings_work","value":"sisters work"} work
+
+- intent: father_details
+  examples: |
+    - who is [Yatendra Kumar Gupta]{"entity":"fathers_detail","value":"Yatendra Kumar Gupta"}
+    - who is [Yatendra Gupta]{"entity":"fathers_detail","value":"Yatendra Kumar Gupta"}
+    - who is [Yatendra Kumar]{"entity":"fathers_detail","value":"Yatendra Kumar Gupta"}
+    - who is [Yatendra Gupta]{"entity":"fathers_detail","value":"Yatendra Kumar Gupta"}
+    - who is [Y K Gupta]{"entity":"fathers_detail","value":"Yatendra Kumar Gupta"}
+    - who is [Y.K Gupta]{"entity":"fathers_detail","value":"Yatendra Kumar Gupta"}
+    - what is your [father's occupation]{"entity":"fathers_detail","value":"occupation"} 
+    - your [father's occupation]{"entity":"fathers_detail","value":"occupation"}
+    - what does your [father do]{"entity":"fathers_detail","value":"occupation"}
+    - where does your [father's family lives]{"entity":"fathers_detail","value":"father's family"} 
+    - in which city your [father's family lives]{"entity":"fathers_detail","value":"father's family"} 
+    - where does your [father lives]{"entity":"fathers_detail","value":"father lives"}
+    - in which city your [father lives]{"entity":"fathers_detail","value":"father lives"}
+    - where does your [father live]{"entity":"fathers_detail","value":"father lives"}
+    - in which city your [father live]{"entity":"fathers_detail","value":"father lives"} 
+    - in which city your [father works]{"entity":"fathers_detail","value":"father works in"}
+    - in which city your [father does business]{"entity":"fathers_detail","value":"father works in"}
+    - how many members are there in your [father's family]{"entity":"fathers_detail","value":"members in father's family"}
+    - number of members in your [father's family]{"entity":"fathers_detail","value":"members in father's family"}
+    - how many [childrens]{"entity":"fathers_detail","value":"father's childrens"} are there in your father's family.
+    - number of [childrens]{"entity":"fathers_detail","value":"father's childrens"} are there in your father's family.
+    - number of [childrens]{"entity":"fathers_detail","value":"father's childrens"} in your father's family.
+    - in which city your [father works]{"entity":"fathers_detail","value":"father works in"}
+    - in which city your [father have business]{"entity":"fathers_detail","value":"father works in"}
+    - where does your [father works]{"entity":"fathers_detail","value":"father works in"}
+
+
+- intent: uncle_details
+  examples: |
+    - who is [Gajendra Kumar Gupta]{"entity":"uncle_detail","value":"Gajendra Kumar Gupta"}
+    - who is [Gajendra Gupta]{"entity":"uncle_detail","value":"Gajendra Kumar Gupta"}
+    - who is [Gajendra Kumar]{"entity":"uncle_detail","value":"Gajendra Kumar Gupta"}
+    - who is [Gajendra Gupta]{"entity":"uncle_detail","value":"Gajendra Kumar Gupta"}
+    - what is your [uncle's occupation]{"entity":"uncle_detail","value":"occupation"} 
+    - your [uncle's occupation]{"entity":"uncle_detail","value":"occupation"}
+    - what does your [uncle do]{"entity":"uncle_detail","value":"occupation"}
+    - where does your [uncle's family lives]{"entity":"uncle_detail","value":"uncle's family"} 
+    - in which city your [uncle's family lives]{"entity":"uncle_detail","value":"uncle's family"} 
+    - where does your [uncle lives]{"entity":"uncle_detail","value":"uncle lives"}
+    - in which city your [uncle lives]{"entity":"uncle_detail","value":"uncle lives"}
+    - where does your [uncle live]{"entity":"uncle_detail","value":"uncle lives"}
+    - in which city your [uncle live]{"entity":"uncle_detail","value":"uncle lives"} 
+    - in which city your [uncle works]{"entity":"uncle_detail","value":"uncle works in"}
+    - in which city your uncle does [business]{"entity":"uncle_detail","value":"uncle works in"}
+    - how many members are there in your [uncle's family]{"entity":"uncle_detail","value":"members in uncle's family"}
+    - number of members in your [uncle's family]{"entity":"uncle_detail","value":"members in uncle's family"}
+    - how many [childrens are there in your uncle's family]{"entity":"uncle_detail","value":"uncle's childrens"} 
+    - number of [childrens are there in your uncle's family]{"entity":"uncle_detail","value":"uncle's childrens"} .
+    - number of [childrens in your uncle's family]{"entity":"uncle_detail","value":"uncle's childrens"} .
+    - in which city your [uncle works]{"entity":"uncle_detail","value":"uncle works in"}
+    - where does your [uncle works]{"entity":"uncle_detail","value":"uncle works in"}
+    - what is your [uncle's designation]{"entity":"uncle_detail","value":"designation"}
+    - [uncle's designation]{"entity":"uncle_detail","value":"designation"}
+    - your [uncle's designation]{"entity":"uncle_detail","value":"designation"}
+    - whats your [uncle post]{"entity":"uncle_detail","value":"designation"}
+    - [uncle post]{"entity":"uncle_detail","value":"designation"} 
+
+- intent: grandfather_details
+  examples: |
+    - who is [Satya Prakash Gupta]{"entity":"grandfather_detail","value":"Satya Prakash Gupta"}
+    - who is [Satya Prakash]{"entity":"grandfather_detail","value":"Satya Prakash Gupta"}
+    - who is [S P Gupta]{"entity":"grandfather_detail","value":"Satya Prakash Gupta"}
+    - what is your [grandfather's occupation]{"entity":"grandfather_detail","value":"occupation"}
+    - your [grandfather's occupation]{"entity":"grandfather_detail","value":"occupation"}  
+
+- intent: family_ladies_name
+  examples: |
+    - who is [Krishna Bala Gupta]{"entity":"family_ladies","value":"krishna bala gupta"}
+    - who is [KrishnaBala Gupta]{"entity":"family_ladies","value":"krishna bala gupta"}
+    - who is [Krishnabala Gupta]{"entity":"family_ladies","value":"krishna bala gupta"}
+    - who is [Krishna Bala Gupta]{"entity":"family_ladies","value":"krishna bala gupta"}
+    - [Krishna Bala Gupta]{"entity":"family_ladies","value":"krishna bala gupta"}
+    - [KrishnaBala Gupta]{"entity":"family_ladies","value":"krishna bala gupta"}
+    - [Krishnabala Gupta]{"entity":"family_ladies","value":"krishna bala gupta"}
+    - [Krishna Bala Gupta]{"entity":"family_ladies","value":"krishna bala gupta"}
+    - who is [Shalini Gupta]{"entity":"family_ladies","value":"Shalini Gupta"}
+    - who is [Shalini]{"entity":"family_ladies","value":"Shalini Gupta"}
+    - [Shalini Gupta]{"entity":"family_ladies","value":"Shalini Gupta"}
+    - [Shalini]{"entity":"family_ladies","value":"Shalini Gupta"
+    - who is [Lata Gupta]{"entity":"family_ladies","value":"Lata Gupta"}
+    - who is [Lata]{"entity":"family_ladies","value":"Lata Gupta"}
+    - [Lata Gupta]{"entity":"family_ladies","value":"Lata Gupta"}
+    - [Lata]{"entity":"family_ladies","value":"Lata Gupta"}
+
+- intent: my_occupation
+  examples: |
+    - what is [your work]{"entity":"my_work","value":"software"}
+    - what is [your occupation]{"entity":"my_work","value":"software"}
+    - what is [your job]{"entity":"my_work","value":"software"}
+    - what is [your designation]{"entity":"my_work","value":"my designation"}
+    - what is [your work profile]{"entity":"my_work","value":"my designation"}
+    - what is your [job location]{"entity":"my_work","value":"my work"}
+    - what is your [work location]{"entity":"my_work","value":"my work"}
+    - in which [company do you work]{"entity":"my_work","value":"software"}
+    - in which [company you work]{"entity":"my_work","value":"software"}
+    - which [company do you work]{"entity":"my_work","value":"software"} you work for
+    - which [company you work]{"entity":"my_work","value":"software"}
+    - what do [you do]{"entity":"my_work","value":"software"}
+
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+

@@ -1,0 +1,118 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - name
+  - my_age
+  - my_city
+  - highest_qualification
+  - my_college
+  - my_college_city
+  - my_college_year
+  - my_school
+  - no_of_family_members
+  - family_members_name
+  - siblings_count
+  - siblings_name
+  - brother_name
+  - siblings_works
+  - father_details
+  - uncle_details
+  - grandfather_details
+  - family_ladies_name
+  - my_occupation
+
+entities:
+  - name
+  - school
+  - relation
+  - brother_name
+  - sister_name
+  - sibling_name
+  - siblings_work
+  - fathers_detail
+  - uncle_detail
+  - grandfather_detail
+  - family_ladies
+  - my_work
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_details_thanks:
+  - text: "nice to meet you {registername}"
+
+  utter_ask_name:
+  - text: "And What is your name?"
+
+  utter_ask_brother_name:
+  - text: "WHich brother your talking about\nFirst number brother\nSecond number brother\nThird number brother"
+
+
+forms:
+ name_form:
+  registername:
+   - type: from_text 
+   
+   
+slots:
+ registername:
+  type: text
+  influence_conversation: false
+
+actions:
+  - utter_greet
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_happy
+  - utter_goodbye
+  - utter_iamabot
+  - action_utter_name
+  - action_utter_age
+  - action_submitname 
+  - action_utter_my_city
+  - action_utter_my_qualification
+  - action_utter_my_college
+  - action_utter_college_city
+  - action_utter_college_year
+  - action_utter_school_name
+  - action_utter_count
+  - action_utter_family_member_name
+  - action_utter_siblings_count
+  - action_utter_siblings_name
+  - utter_ask_brother_name
+  - action_utter_siblings_work
+  - action_utter_father_details
+  - action_utter_uncle_details
+  - action_utter_grandfather_details
+  - action_utter_family_ladies_details
+  - action_utter_my_occupation
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

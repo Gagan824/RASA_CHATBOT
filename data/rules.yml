@@ -1,0 +1,142 @@
+version: "2.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+#My name and ask user name
+- rule: my name is
+  steps: 
+  - intent: name
+  - action: action_utter_name
+  - action: utter_ask_name
+  - action: name_form
+  - active_loop: name_form
+
+- rule: Submit your name
+  condition:
+  # Condition that form is active.
+  - active_loop: name_form
+  steps:
+  # Form is deactivated
+  - action: name_form
+  - active_loop: null
+  - slot_was_set:
+    - registername : null
+  # The actions we want to run when the form is submitted.
+  - action: action_submitname
+
+#telling my age
+- rule: my age
+  steps: 
+  - intent: my_age
+  - action: action_utter_age
+
+#telling my city
+- rule: my city
+  steps:
+  - intent: my_city
+  - action: action_utter_my_city
+
+# telling my highest graduation
+- rule: my highest eduction
+  steps:
+  - intent: highest_qualification
+  - action: action_utter_my_qualification
+
+# telling my college name 
+- rule: my college name 
+  steps:
+  - intent: my_college
+  - action: action_utter_my_college
+
+#telling my college city
+- rule: my college city
+  steps:
+  - intent: my_college_city
+  - action: action_utter_college_city
+
+# telling my college year
+- rule: my college year
+  steps: 
+  - intent: my_college_year
+  - action: action_utter_college_year
+
+# telling my school names
+- rule: my school names
+  steps:
+  - intent: my_school
+  - action: action_utter_school_name
+
+#telling count of family members
+- rule: my family members
+  steps:
+  - intent: no_of_family_members
+  - action: action_utter_count
+
+#telling my family members name
+- rule: my family members name
+  steps:
+  - intent:  family_members_name
+  - action: action_utter_family_member_name
+
+#telling siblings count
+- rule: my siblings count
+  steps:
+  - intent: siblings_count
+  - action: action_utter_siblings_count
+
+# telling brother name 
+- rule: my siblings name 
+  steps:
+  - intent: siblings_name
+  - action: action_utter_siblings_name
+
+- rule: my brother name
+  steps:
+  - intent: brother_name
+  - action: utter_ask_brother_name
+ 
+# telling my siblings work 
+- rule: my siblings work
+  steps: 
+  - intent: siblings_works
+  - action: action_utter_siblings_work
+
+# telling my father infor
+- rule: my father details
+  steps:
+  - intent: father_details
+  - action: action_utter_father_details
+
+#telling uncle details
+- rule: my uncle details
+  steps:
+  - intent: uncle_details
+  - action: action_utter_uncle_details
+
+#telling grandfather details
+- rule: my gradfather details
+  steps:
+  - intent: grandfather_details
+  - action: action_utter_grandfather_details
+
+#telling family ladies details
+- rule: my family ladies details
+  steps:
+  - intent: family_ladies_name
+  - action: action_utter_family_ladies_details
+
+#teeling my occupation details
+- rule: my occupation
+  steps:
+  - intent: my_occupation
+  - action: action_utter_my_occupation
